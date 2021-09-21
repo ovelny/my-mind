@@ -18,23 +18,11 @@
 		<link rel="stylesheet" href="css/print.css" media="print" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<base target="_blank" />
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-383250-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-383250-18');
-</script>
-
 	
 	</head>
 	<body>
 		<ul id="port">
-			<div id="tip">Type <code>:screenshot --selector .item</code> in Firefox Console to save the Map as an image! For more tips/news, follow <a href="https://twitter.com/my_mind_app">@my_mind_app</a>.</div>
-<!--			<div id="tip">Press ‘Tab’ to Insert Child, ‘Enter’ to Insert Sibling Node. For more tips/news, follow <a href="https://twitter.com/my_mind_app">@my_mind_app</a>.</div> -->
+			<div id="tip" style="display:none;"></div>
 		</ul>
 
 		<div class="ui">
@@ -888,8 +876,6 @@
 					</select>
 			</p>
 
-			<a id="github" href="https://github.com/ondras/my-mind" title="GitHub project page"><img src="github.png" alt="GitHub project page" /></a>
-			<a id="privacy" href="http://my-mind.github.io/PRIVACY.txt">Privacy policy</a>
 			<button id="toggle" title="Toggle UI"></button>
 			<button data-command="Help" title="Help"><img src="icons/help.png" alt="Help" /></button>
 			<button data-command="Notes" title="Notes"><img src="icons/notes.png" alt="Notes" /></button>

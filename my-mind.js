@@ -1792,15 +1792,15 @@ MM.Command.Delete.execute = function() {
 MM.Command.Swap = Object.create(MM.Command, {
 	label: {value: "Swap sibling"},
 	keys: {value: [
-		{keyCode: 38, ctrlKey:true},
-		{keyCode: 40, ctrlKey:true},
+		{keyCode: 75, ctrlKey:true},
+		{keyCode: 74, ctrlKey:true},
 	]}
 });
 MM.Command.Swap.execute = function(e) {
 	var current = MM.App.current;
 	if (current.isRoot() || current.getParent().getChildren().length < 2) { return; }
 
-	var diff = (e.keyCode == 38 ? -1 : 1);
+	var diff = (e.keyCode == 75 ? -1 : 1);
 	var action = new MM.Action.Swap(MM.App.current, diff);
 	MM.App.action(action);
 }
@@ -1808,15 +1808,15 @@ MM.Command.Swap.execute = function(e) {
 MM.Command.Side = Object.create(MM.Command, {
 	label: {value: "Change side"},
 	keys: {value: [
-		{keyCode: 37, ctrlKey:true},
-		{keyCode: 39, ctrlKey:true},
+		{keyCode: 72, ctrlKey:true},
+		{keyCode: 76, ctrlKey:true},
 	]}
 });
 MM.Command.Side.execute = function(e) {
 	var current = MM.App.current;
 	if (current.isRoot() || !current.getParent().isRoot()) { return; }
 
-	var side = (e.keyCode == 37 ? "left" : "right");
+	var side = (e.keyCode == 72 ? "left" : "right");
 	var action = new MM.Action.SetSide(MM.App.current, side);
 	MM.App.action(action);
 }
@@ -2147,18 +2147,18 @@ MM.Command.Computed.execute = function() {
 MM.Command.Select = Object.create(MM.Command, {
 	label: {value: "Move selection"},
 	keys: {value: [
-		{keyCode: 38, ctrlKey:false},
-		{keyCode: 37, ctrlKey:false},
-		{keyCode: 40, ctrlKey:false},
-		{keyCode: 39, ctrlKey:false}
+		{keyCode: 75, ctrlKey:false},
+		{keyCode: 72, ctrlKey:false},
+		{keyCode: 74, ctrlKey:false},
+		{keyCode: 76, ctrlKey:false}
 	]}
 });
 MM.Command.Select.execute = function(e) {
 	var dirs = {
-		37: "left",
-		38: "top",
-		39: "right",
-		40: "bottom"
+		72: "left",
+		75: "top",
+		76: "right",
+		74: "bottom"
 	}
 	var dir = dirs[e.keyCode];
 
@@ -4068,10 +4068,10 @@ MM.UI.Help = function() {
 		34: "PgDown",
 		35: "End",
 		36: "Home",
-		37: "←",
-		38: "↑",
-		39: "→",
-		40: "↓",
+		72: "←",
+		75: "↑",
+		76: "→",
+		74: "↓",
 		45: "Insert",
 		46: "Delete",
 		65: "A",

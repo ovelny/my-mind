@@ -1,18 +1,18 @@
 MM.Command.Select = Object.create(MM.Command, {
 	label: {value: "Move selection"},
 	keys: {value: [
-		{keyCode: 38, ctrlKey:false},
-		{keyCode: 37, ctrlKey:false},
-		{keyCode: 40, ctrlKey:false},
-		{keyCode: 39, ctrlKey:false}
+		{keyCode: 75, ctrlKey:false},
+		{keyCode: 72, ctrlKey:false},
+		{keyCode: 74, ctrlKey:false},
+		{keyCode: 76, ctrlKey:false}
 	]}
 });
 MM.Command.Select.execute = function(e) {
 	var dirs = {
-		37: "left",
-		38: "top",
-		39: "right",
-		40: "bottom"
+		72: "left",
+		75: "top",
+		76: "right",
+		74: "bottom"
 	}
 	var dir = dirs[e.keyCode];
 
