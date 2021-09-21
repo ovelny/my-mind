@@ -18,3 +18,5 @@ This fork is then "compiled" into a single HTML file with [Monolith](https://git
 
 monolith -IaMv index.html -o mindmap.html
 ```
+
+You can find the `mindmap.html` file in the releases section of this repo.
