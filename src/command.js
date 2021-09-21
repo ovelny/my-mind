@@ -206,8 +206,8 @@ MM.Command.UI.execute = function() {
 MM.Command.Pan = Object.create(MM.Command, {
 	label: {value: "Pan the map"},
 	keys: {value: [
-		{keyCode: "W".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false},
-		{keyCode: "A".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false},
+		{keyCode: "Z".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false},
+		{keyCode: "Q".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false},
 		{keyCode: "S".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false},
 		{keyCode: "D".charCodeAt(0), ctrlKey:false, altKey:false, metaKey:false}
 	]},
@@ -229,8 +229,8 @@ MM.Command.Pan.execute = function(e) {
 
 MM.Command.Pan._step = function() {
 	var dirs = {
-		"W": [0, 1],
-		"A": [1, 0],
+		"Z": [0, 1],
+		"Q": [1, 0],
 		"S": [0, -1],
 		"D": [-1, 0]
 	}
@@ -241,7 +241,7 @@ MM.Command.Pan._step = function() {
 		offset[1] += dirs[ch][1];
 	});
 
-	MM.App.map.moveBy(15*offset[0], 15*offset[1]);
+	MM.App.map.moveBy(80*offset[0], 80*offset[1]);
 }
 
 MM.Command.Pan.handleEvent = function(e) {
